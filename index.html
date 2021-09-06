@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de sprint: APOD</title>
+    <link rel="stylesheet" href="./css/apod.css">
+   
+    
+</head>
+<body>
+
+    <header>
+        <a href="/"><img src="img/nasa.png" /></a>
+        <h1 id= "titulo">Astronomy Picture of the Day</h1>
+    </header>
+
+    <p id = "sobre">
+    <a href = "https://apod.nasa.gov/apod/archivepix.html" target ="_blank">Descubra o cosmos! </a>
+    A cada dia, uma imagem ou fotografia diferente de nosso fascinante universo é apresentada, 
+    junto com uma breve explicação escrita por um astrônomo profissional.
+
+    </p>
+
+    <p id= "escolha">
+    Por favor, escolha uma data a partir de 16 de junho de 1995 e viaje no tempo para uma imagem ou vídeo!
+    </p>
+
+    
+    <main id = "principal">
+
+        <div id="dataDoInput">
+            <p id= "procurar">Pesquise a data que desejar:</p>
+            <input id= "procuraData" type="date" name="date" min="1995-06-16">
+            <button id="btn" type="submit">Procure</button>
+        </div>
+
+        <div id="apod">
+
+        </div>
+
+    </main>
+
+    <footer>
+        Site feito para fins educacionais por 
+        <a href="https://github.com/mmcrisx" target="_blank">Mariana Cristina Dias dos Santos</a> 
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
+    crossorigin="anonymous"></script>
+    <script src= "js/apod.js" ></script>
+    
+</body>
+</html>

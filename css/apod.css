@@ -1,0 +1,52 @@
+*,
+*::after,
+*::before
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+    background-image: linear-gradient(to right, red , yellow);
+
+}
+
+img {
+    width: 90px;
+    height: 90px;
+}
+header {
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+  }
+  
+
+h1, p{
+    color: #efecea;
+    font-size: 30px;
+
+}
+
+.asfasf{
+    color: 'white';
+    font-size: 17px;
+  }
+
+footer {
+    color: #efecea;
+    text-align: center;
+    font-size: 15px;
+    padding: 30px;
+    text-align: center;
+    background: linear-gradient(to right, red , yellow);
+}
+  
+  footer > a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #030303;
+}
