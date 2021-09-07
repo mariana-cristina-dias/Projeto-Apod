@@ -1,40 +1,91 @@
 *,
 *::after,
-*::before
-{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-body{
-    background-image: linear-gradient(to right, red , yellow);
-
+body {
+    background-image: linear-gradient(to right, red, yellow);
 }
 
-img {
-    width: 90px;
-    height: 90px;
-}
 header {
     padding: 7px;
     display: flex;
     justify-content: center;
     height: 100px;
-  }
-  
-
-h1, p{
-    color: #efecea;
-    font-size: 30px;
-
 }
 
-.asfasf{
-    color: 'white';
-    font-size: 17px;
-  }
+header > h1 {
+    padding: 25px;
+    color: black;
+}
+
+#nasa {
+    width: 90px;
+    height: 90px;
+}
+
+#sobre,
+#escolha {
+    padding: 5px;
+    justify-content: center;
+    height: 70px;
+}
+
+#sobre > a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
+#sobre > a:hover {
+    color: #fffb00;
+    font-size: 33px;
+}
+
+#entrada {
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+}
+
+input[type="date"] {
+    color: #ffffff;
+    font-size: 18px;
+    border: 1px solid #ecf0f1;
+    background: #ff6d00;
+    padding: 5px;
+}
+
+#botao {
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: white;
+    color: black;
+    border: 2px solid #404940;
+    padding: 14px 40px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff6d00;
+    color: white;
+}
+
+h1,
+p {
+    color: #efecea;
+    font-size: 30px;
+    text-align: center;
+}
 
 footer {
     color: #efecea;
@@ -42,11 +93,55 @@ footer {
     font-size: 15px;
     padding: 30px;
     text-align: center;
-    background: linear-gradient(to right, red , yellow);
+    background: linear-gradient(to right, rgb(173, 12, 12), yellow);
+    bottom: 0;
+    width: 100%;
+    position: fixed;
 }
-  
-  footer > a {
+
+footer > a {
     text-decoration: none;
     font-weight: bold;
     color: #030303;
+}
+
+#infoResultado {
+    padding: 50px;
+}
+
+#titulo {
+    color: #140a03;
+    font-family: fantasy;
+    font-style: oblique;
+    font-weight: 900;
+    border-style: outset;
+    text-shadow: 2px 2px 5px #ff6d00;
+}
+
+#fotoOuVideo {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#explicacao {
+    color: rgb(12, 12, 12);
+    text-align: justify;
+    font-family: Arial Narrow, sans-serif;
+}
+
+#foto {
+    width: 1000px;
+    height: 1000px;
+    border-radius: 10px;
+}
+
+#video {
+    width: 1200px;
+    height: 600px;
+}
+
+@media (max-width: 700px) {
 }

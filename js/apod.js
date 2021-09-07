@@ -1,29 +1,34 @@
-let xhttp = new XMLHttpRequest();
+let obj;
+const botao = $("#btnSubmit");
+const titulo = $("#titulo");
+const explicacao = $("#explicacao");
+const img = $("#fotoOuVideo");
 
-// Verifricando meu status e convertendo para JSON
-xhttp.onload = function () {
-  if (xhttp.status >= 200 && xhttp.status <= 299) {
-  
+botao.on("click", function (event) {
+    event.preventDefault();
+    pedido();
+});
 
-  }
-};
+function pedido(data) {
+    $(`#data`).val();
 
-// Configurando minha request
-xhttp.open(
-  "GET",
-  "'https://api.nasa.gov/planetary/apod?api_key=dhlggRiSdNkobaNCGmOjZBpJlUJRAdY9eubhX2bq'"
-);
-xhttp.send();
+    $.ajax({
+        url: `https://api.nasa.gov/planetary/apod?api_key=dhlggRiSdNkobaNCGmOjZBpJlUJRAdY9eubhX2bq&date=` + $(`#data`).val(),
 
-let nasa = $.ajax({url: 'https://api.nasa.gov/planetary/apod?api_key=dhlggRiSdNkobaNCGmOjZBpJlUJRAdY9eubhX2bq', async: false}).responseJSON
-
-apod.innerHTML = `
-	<h1 class="asfasf"> ${nasa.title} </h1>
-    <h1 class="asfasf"> ${nasa.explanation} </h1>
-    <h1 class="asfasf"> ${nasa.hdurl} </h1>
-`
-
-
-
-
-
+        success: function (result) {
+            console.log(result);
+            obj = result;
+            titulo.html(`${obj.title}`);
+            explicacao.html(`${obj.explanation}`);
+            if (obj.media_type != "video") {
+                img.html(`
+      <img width = '600' heigth = '600' id="foto" src="${obj.url}" alt=""></img>
+      `);
+            } else {
+                img.html(`
+      <iframe id="video" src="${obj.url}" alt=""></iframe>
+      `);
+            }
+        },
+    });
+}
