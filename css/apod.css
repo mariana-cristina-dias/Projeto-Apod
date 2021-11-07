@@ -143,5 +143,21 @@ footer > a {
     height: 600px;
 }
 
-@media (max-width: 700px) {
+@media(max-width:700px){
+    body {
+    }
+  
+    #foto {
+        width: 200px;
+        height: 500px;
+        border-radius: 10px;
+    }
+    
+    #video {
+        width: 1200px;
+        height: 600px;
+    }
+    footer{
+        background: #000;
+    }
 }
